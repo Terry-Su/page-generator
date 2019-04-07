@@ -1,0 +1,23 @@
+{
+  "eslint.autoFixOnSave": false,
+  "eslint.validate": [
+    "javascript",
+    { "language": "typescript", "autoFix": true },
+    { "language": "typescriptReact", "autoFix": true }
+  ],
+
+  "prettier.eslintIntegration": true,
+
+
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "importSorter.importStringConfiguration.hasSemicolon": false,
+
+  "files.associations": {
+    "*.md": "mdx",
+  },
+
+  "files.exclude": {
+    "**/.backup": true,
+    "build-contents": true,
+  },
+}

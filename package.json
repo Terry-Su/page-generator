@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "start": "nodemon --verbose -e ts,tsx"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "index.tsx",
+      "components/**/*"
+    ],
+    "exec": "ts-node index"
+  },
+  "devDependencies": {
+    "@mdx-js/loader": "^0.20.3",
+    "@mdx-js/mdx": "^0.20.3",
+    "@types/fs-extra": "^5.0.5",
+    "browser-sync": "^2.26.3",
+    "chokidar": "^2.1.5",
+    "fs-extra": "^7.0.1",
+    "nodemon": "^1.18.10",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-live": "^2.0.0",
+    "styled-components": "^4.2.0",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.4.2",
+    "typescript-eslint-parser": "^22.0.0"
+  }
+}
