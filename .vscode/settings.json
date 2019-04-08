@@ -1,13 +1,12 @@
 {
-  "eslint.autoFixOnSave": false,
+  "eslint.autoFixOnSave": true,
   "eslint.validate": [
-    "javascript",
+    { "language": "javascript", "autoFix": true },
     { "language": "typescript", "autoFix": true },
     { "language": "typescriptReact", "autoFix": true }
   ],
 
   "prettier.eslintIntegration": true,
-
 
   "importSorter.generalConfiguration.sortOnBeforeSave": true,
   "importSorter.importStringConfiguration.hasSemicolon": false,

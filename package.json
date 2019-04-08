@@ -1,11 +1,14 @@
 {
   "scripts": {
-    "start": "nodemon --verbose -e ts,tsx"
+    "start": "nodemon --verbose -e ts,tsx",
+    "serve": "ts-node server"
   },
   "nodemonConfig": {
     "watch": [
       "index.tsx",
-      "components/**/*"
+      "components/**/*",
+      "styles/**/*",
+      "server.ts"
     ],
     "exec": "ts-node index"
   },
@@ -20,6 +23,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-live": "^2.0.0",
+    "showdown": "^1.9.0",
     "styled-components": "^4.2.0",
     "ts-node": "^8.0.3",
     "typescript": "^3.4.2",

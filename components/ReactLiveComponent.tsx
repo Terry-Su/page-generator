@@ -4,10 +4,14 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 import { MDXTag } from '@mdx-js/tag'
 
+import GlobalMarkdownStyle from '../styles/GlobalMarkdownStyle'
+import Markdown from './Markdown'
+
 const basicScope = {
   React,
   styled,
   MDXTag,
+  M: Markdown
 }
 
 export default function ReactLiveComponent(props: any = {}) {
@@ -19,20 +23,39 @@ export default function ReactLiveComponent(props: any = {}) {
   }
   const computedNoInline = standalone != null ? !standalone : noInline
   return (
-    <LiveProvider scope={scope} noInline={computedNoInline} code={code}>
-      <LiveError
+    <React.Fragment>
+      <LiveProvider
+        scope={scope}
+        noInline={computedNoInline}
+        code={code}
         style={{
           width: "100%",
           height: "100%"
         }}
-      />
-      <LivePreview
-        className="markdown-body"
-        style={{
-          width: "100%",
-          height: "100%"
-        }}
-      />
-    </LiveProvider>
+      >
+        <LiveError
+          style={{
+            width: "100%",
+            height: "100%"
+          }}
+        />
+        <StyledPreview>
+          <LivePreview className="markdown-body" />
+        </StyledPreview>
+      </LiveProvider>
+
+      <GlobalMarkdownStyle />
+    </React.Fragment>
   )
 }
+
+const StyledPreview = styled.div`
+  height: 100%;
+  .markdown-body {
+    height: 100%;
+    
+    > div {
+      height: 100%;
+    }
+  }
+`

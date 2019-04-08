@@ -1,6 +1,7 @@
 {
   "include": [
-    "index.ts",
+    "index.tsx",
+    "components/**/*.tsx"
   ],
   "exclude": ["node_modules"],
   "compilerOptions": {
